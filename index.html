@@ -58,23 +58,42 @@
             width: 500px;
         }
         header{
-            width: max-content;
-            height: 200px;
-            margin: 50px;
+            display: flex;
+            justify-content: space-between; /* Pushes logo and nav to opposite ends */
+            align-items: center;            /* Centers items vertically */
+            padding: 20px 20px;
+            background-color: #333;
+            color: white;
             position: sticky;
-            background-color: white;
+            top: 0;        /* Required for sticky to work */
+            z-index: 999;
         }
         #logo {
             width: 30px;
 
         }
+        .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        }
+
+        .nav-links a:hover {
+        color: #ff9900; /* Subtle hover effect */
+        }
     </style>
 </head>
 
 <body>
-    <!-- <header>
+    <header>
         <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Claude_AI_symbol.svg" alt="">
-    </header> -->
+        <nav class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+    </header>
     <div class="container">
         <div class="block" id="block1">
             <h1>Coder Dino will code for food</h1>
